@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body bgcolor="#7fffd4">
+<H1>Hello, Welcome To ABC Bank</H1>
+<form action="/adduser" th:object="${bankAccountVo}" method="post">
+    <label>Enter Your Name:</label><br>
+    <input type="text" name="accountHolderName" th:field="*{accountHolderName}" required><br>
+    <label>Deposite Initial Amount:</label><br>
+    <label>
+        <input type="number" name="balance" th:field="*{balance}" required>
+    </label><br>
+    <label>Enter Email:</label><br>
+    <input type="text" name="email" th:field="*{email}" required ><br>
+    <lable>Gender:</lable><br>
+    <input type="text" name="gender" th:field="*{gender}" required><br>
+    <label>City:</label><br>
+    <input type="text" name="city" th:field="*{city}" required><br><br>
+    <button>Submit</button>
+</form>
+</body>
+</html>
